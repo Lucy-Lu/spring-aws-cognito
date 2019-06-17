@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            client-id: {client-id}
+            client-secret: {client-secret-id}
+            clientName: {app client name}
+            scope: openid
+            redirectUriTemplate: {callbackUrl}
+
+        provider:
+          cognito:
+            issuerUri:{domainUrl}/{poolId}
+
+            usernameAttribute: cognito:username
